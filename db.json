@@ -1,0 +1,34 @@
+{
+  "post": [
+    {
+      "userId": 1,
+      "name": "pranjal dvd",
+      "email": "pranjal@test.com",
+      "mobile": 9999
+    },
+    {
+      "userId": 2,
+      "name": "guru",
+      "email": "guru@gmail.com",
+      "mobile": 9999
+    },
+    {
+      "userId": 3,
+      "name": "sillu",
+      "email": "sillu@gmail.com",
+      "mobile": 9999
+    },
+    {
+      "userId": 4,
+      "name": "prem",
+      "email": "prem@gmail.com",
+      "mobile": 9999
+    },
+    {
+      "userId": 5,
+      "name": "saurav",
+      "email": "saurav@gmail.com",
+      "mobile": 9999
+    }
+  ]
+}
