@@ -10,7 +10,7 @@ function App() {
   const[mobile,setMobile] = useState("")
 
   function saveUser(){
-    console.warn({name,email,mobile})
+    //console.warn({name,email,mobile})
     let data={name,email,mobile}
     fetch("http://localhost:4000/post",{
       method:'POST',
@@ -18,11 +18,11 @@ function App() {
         'Accept':'application/json',
         'Content-Type':'application.json'
       },
-      body:JSON.stringfy(data)
-    }).then((result)=>{
+      body:JSON.stringify(data)
+    }).then((resp)=>{
       //console.warn("result",result
-      result.json().then((resp)=>{
-        console.log("resp")
+      resp.json().then((result)=>{
+        console.log("result",result)
       })
       })
   }
@@ -35,7 +35,9 @@ function App() {
   })
   }) 
 },[])
-console.warn(data)
+console.warn(data);
+
+
   return(
     <div className='primary'>
        <h1>React API</h1>
@@ -65,7 +67,7 @@ console.warn(data)
         <input type="text" name="name" value={name} onChange={(e)=>{setName(e.target.value)}} placeholder='name' /><br />
         <input type="text" name="email" value={email} onChange={(e)=>{setEmail(e.target.value)}} placeholder='email'/> <br />
         <input type="text" name="mobile" value={mobile} onChange={(e)=>{setMobile(e.target.value)}} placeholder='mobile'/>
-        <button onClick={saveUser} >Submit</button>
+        <button onClick={saveUser} >Submit and Save</button>
     </div>
    
   )
